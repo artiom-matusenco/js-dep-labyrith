@@ -8,6 +8,7 @@ export default class TeamPlayer3 extends PlayerBot {
 
     this.currentMove = RIGHT;
     this.steps = [RIGHT, FORWARD, LEFT, BACKWARD];
+    this.random = () => Math.floor(Math.random() * this.steps.length);
     this.stepIndex = 0;
 
     /**
@@ -17,7 +18,7 @@ export default class TeamPlayer3 extends PlayerBot {
       if (!status) {
         this.stepIndex += 1;
         if (this.stepIndex === this.steps.length) {
-          this.stepIndex = 0
+          this.stepIndex = this.random();
         }
         this.currentMove = this.steps[this.stepIndex];
       }
