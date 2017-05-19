@@ -1,10 +1,10 @@
-import TeamPlayer from './TeamPlayer';
+import TeamPlayer1 from './TeamPlayer1';
 // import there your player to test
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
 import {EMPTY, BORDER, PLAYER, JEVEL} from '../constants/boardFields';
 
 function createPlayer(id) {
-  return new TeamPlayer(id);
+  return new TeamPlayer1(id);
 }
 
 describe('PlayerBot', () => {
