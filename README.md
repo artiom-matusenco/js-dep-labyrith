@@ -9,17 +9,23 @@
 
 ## Description
 This project is an implementation of simple game which is designed to perform a hackathon in JS department teamplayers.
-The game consists in competition of **"player-bots"** implemented by participants of hackathon.
+The game consists in competition of **"TeamPlayers"** implemented by participants of hackathon.
 
-The goal of every **"player-bot"** is to move and find the destination point "JEVEL" item before the others. The board will be rounded with wall and there will be many borders inside.
+The goal of every **"TeamPlayer"** is to move and find the destination point **"JEVEL"** item before the others. The board will be rounded with wall and there will be many borders inside.
 
-## **"bot-player"** class implementation
+## How to test?
+Register your **"TeamPlayer"** class inside `src/players/unit_Player.spec.js` and simply run `npm test`.
+
+## **"TeamPlayer"** class implementation
+To implement your **"TeamPlayer"** create a new file with name `TeamPlayer[your-team-number].js` in `src/players/` and write your **magic** code following next interface:
+
+
 ```js
 import PlayerBot from '../core/PlayerBot';
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
 import {EMPTY, BORDER, PLAYER, JEVEL, WALL} from '../constants/boardFields';
 
-export default class Player extends PlayerBot {
+export default class TeamPlayer extends PlayerBot {
   constructor(id) {
     super(id);
   }
