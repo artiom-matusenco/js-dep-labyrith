@@ -1,8 +1,8 @@
 import {BACKWARD, FORWARD, LEFT, RIGHT} from '../constants/directions';
 
-const FREE_PASS = 0;
-const MAY_PASS = 1;
-const DO_NOT_PASS = 2;
+const GREEN_LIGHT = 0;
+const YELLOW_LIGHT = 1;
+const RED_LIGHT = 2;
 
 
 export class Map {
@@ -36,9 +36,9 @@ export class Map {
         continue;
       }
 
-      if (directions[direction] === FREE_PASS) {
+      if (directions[direction] === GREEN_LIGHT) {
         return direction;
-      } else if (directions[direction] === MAY_PASS) {
+      } else if (directions[direction] === YELLOW_LIGHT) {
         let pointVistedCount;
 
         switch (direction) {
@@ -104,21 +104,21 @@ export class Map {
   }
 
   markPointVisited(x, y) {
-    this._markPoint(x, y, MAY_PASS);
+    this._markPoint(x, y, YELLOW_LIGHT);
     this.addPointVisit(x, y);
   }
 
   markPointUnavailable(x, y) {
-    this._markPoint(x, y, DO_NOT_PASS);
+    this._markPoint(x, y, RED_LIGHT);
   }
 
   getPointDirections(x, y) {
     this._map[x] = this._map[x] || {};
     this._map[x][y] = this._map[x][y] || {
-        [FORWARD]: FREE_PASS,
-        [LEFT]: FREE_PASS,
-        [BACKWARD]: FREE_PASS,
-        [RIGHT]: FREE_PASS,
+        [FORWARD]: GREEN_LIGHT,
+        [LEFT]: GREEN_LIGHT,
+        [RIGHT]: GREEN_LIGHT,
+        [BACKWARD]: GREEN_LIGHT,
     };
 
     return this._map[x][y];
