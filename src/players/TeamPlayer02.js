@@ -38,19 +38,19 @@ export default class TeamPlayer02 extends PlayerBot {
       case WALL:
         switch (this.mapInstance.lastDirection) {
           case LEFT:
-            this.mapInstance.markXWall(this.mapInstance.x - 1);
+            this.mapInstance.markXWall(+this.mapInstance.x - 1);
             break;
 
           case RIGHT:
-            this.mapInstance.markXWall(this.mapInstance.x + 1);
+            this.mapInstance.markXWall(+this.mapInstance.x + 1);
             break;
 
           case BACKWARD:
-            this.mapInstance.markYWall(this.mapInstance.y - 1);
+            this.mapInstance.markYWall(+this.mapInstance.y - 1);
             break;
 
           case FORWARD:
-            this.mapInstance.markYWall(this.mapInstance.y + 1);
+            this.mapInstance.markYWall(+this.mapInstance.y + 1);
             break;
         }
         break;
@@ -67,11 +67,11 @@ export default class TeamPlayer02 extends PlayerBot {
             break;
 
           case BACKWARD:
-            this.mapInstance.markPointUnavailable(this.mapInstance.x, this.mapInstance.y - 1);
+            this.mapInstance.markPointUnavailable(this.mapInstance.x, +this.mapInstance.y - 1);
             break;
 
           case FORWARD:
-            this.mapInstance.markPointUnavailable(this.mapInstance.x, this.mapInstance.y + 1);
+            this.mapInstance.markPointUnavailable(this.mapInstance.x, +this.mapInstance.y + 1);
             break;
         }
 
@@ -80,19 +80,19 @@ export default class TeamPlayer02 extends PlayerBot {
       case PLAYER:
         switch (this.mapInstance.lastDirection) {
           case LEFT:
-            this.mapInstance.markPointVisited(this.mapInstance.x - 1, this.mapInstance.y);
+            this.mapInstance.markPointVisited(+this.mapInstance.x - 1, this.mapInstance.y);
             break;
 
           case RIGHT:
-            this.mapInstance.markPointVisited(this.mapInstance.x + 1, this.mapInstance.y);
+            this.mapInstance.markPointVisited(+this.mapInstance.x + 1, this.mapInstance.y);
             break;
 
           case BACKWARD:
-            this.mapInstance.markPointVisited(this.mapInstance.x, this.mapInstance.y - 1);
+            this.mapInstance.markPointVisited(this.mapInstance.x, +this.mapInstance.y - 1);
             break;
 
           case FORWARD:
-            this.mapInstance.markPointVisited(this.mapInstance.x, this.mapInstance.y + 1);
+            this.mapInstance.markPointVisited(this.mapInstance.x, +this.mapInstance.y + 1);
             break;
         }
 

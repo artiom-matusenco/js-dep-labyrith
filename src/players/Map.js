@@ -39,7 +39,25 @@ export class Map {
       if (directions[direction] === FREE_PASS) {
         return direction;
       } else if (directions[direction] === MAY_PASS) {
-        let pointVistedCount = this.getVisitedCount(x, y);
+        let pointVistedCount;
+
+        switch (direction) {
+          case LEFT:
+            pointVistedCount = this.getVisitedCount(+this.x - 1, this.y);
+            break;
+
+          case RIGHT:
+            pointVistedCount = this.getVisitedCount(+this.x + 1, this.y);
+            break;
+
+          case BACKWARD:
+            pointVistedCount = this.getVisitedCount(this.x, +this.y - 1);
+            break;
+
+          case FORWARD:
+            pointVistedCount = this.getVisitedCount(this.x, +this.y + 1);
+            break;
+        }
 
         if (minCount > pointVistedCount) {
           minCount = pointVistedCount;
