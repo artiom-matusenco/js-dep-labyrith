@@ -116,9 +116,9 @@ export class Map {
     this._map[x] = this._map[x] || {};
     this._map[x][y] = this._map[x][y] || {
         [FORWARD]: FREE_PASS,
+        [LEFT]: FREE_PASS,
         [BACKWARD]: FREE_PASS,
         [RIGHT]: FREE_PASS,
-        [LEFT]: FREE_PASS,
     };
 
     return this._map[x][y];
