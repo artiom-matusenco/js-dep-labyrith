@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #222;
-  height: 200px;
+  height: 150px;
   padding: 20px;
   color: white;
 }
@@ -21,4 +21,130 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.App {
+  margin: 5px;
+}
+
+.erc-board {
+  /*border: 1px solid black;*/
+  display: flex;
+  overflow: hidden;
+}
+
+.controls-container {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0 20px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(204, 246, 255, 0.38);
+}
+
+.erc-players-info {
+  margin: 10px;
+}
+
+.player-info {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #a7a7a7;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.player-info > span {
+  margin-right: 10px;
+}
+
+.player-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-size: cover;
+  margin: 0 20px 0 0;
+}
+
+.timer-container {
+  height: 170px;
+}
+
+.react-countdown-clock {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+}
+
+.play-buttons {
+  margin: 20px;
+}
+
+.edit-controls {
+  margin: 10px 0;
+  text-align: left;
+  background-color: #e5f3ff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.edit-controls-buttons {
+  text-align: center;
+}
+
+.edit-controls-buttons > .state-edit-mode {
+  color: orangered;
+}
+
+.edit-control-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-row {
+  display: flex;
+  justify-content: center;
+}
+
+.cell {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.erc-border-item {
+  background-color: #a7a7a7;
+}
+
+.erc-player-item {
+  background-size: cover;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+}
+
+.erc-finish-item {
+  background-color: greenyellow;
+}
+
+/* For screens wider than MBP */
+@media(min-width: 1441px) {
+  .cell {
+    width: 40px;
+    height: 40px;
+  }
 }

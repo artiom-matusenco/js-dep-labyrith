@@ -1,12 +1,13 @@
 {
-  "name": "players-lab",
+  "name": "dep-hack",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "react-scripts": "0.9.5"
   },
   "dependencies": {
     "react": "^15.5.4",
+    "react-countdown-clock": "^1.1.0",
     "react-dom": "^15.5.4"
   },
   "scripts": {
