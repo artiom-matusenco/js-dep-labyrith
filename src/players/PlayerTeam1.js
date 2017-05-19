@@ -1,6 +1,6 @@
 import PlayerBot from '../core/PlayerBot';
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
-import {EMPTY, BORDER, PLAYER, JEVEL, WALL} from '../constants/boardFields';
+import {EMPTY, BORDER, PLAYER, JEWEL, WALL} from '../constants/boardFields';
 
 
 class Movement {
@@ -101,7 +101,7 @@ debugger;
    *  {
    *    pass: {Boolean},
    *    finish: {Boolean},
-   *    type: {String} one of map field type (EMPTY, BORDER, PLAYER, JEVEL, WALL)
+   *    type: {String} one of map field type (EMPTY, BORDER, PLAYER, JEWEL, WALL)
    *   }
    * @return {void}
    */

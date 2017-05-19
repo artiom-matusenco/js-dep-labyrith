@@ -5,7 +5,7 @@ import TeamPlayer2 from './PlayerTeam2';
 import TeamPlayer3 from './PlayerTeam3';
 
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
-import {EMPTY, BORDER, PLAYER, JEVEL} from '../constants/boardFields';
+import {EMPTY, BORDER, PLAYER, JEWEL} from '../constants/boardFields';
 
 
 for (let teamPlayer of [TeamPlayer1, TeamPlayer2, TeamPlayer3]) {
@@ -45,12 +45,12 @@ describe('PlayerBot', () => {
         player.setMoveResult(moveResult);
       });
 
-      it('gets JEVEL type of moveResult without crashing', () => {
+      it('gets JEWEL type of moveResult without crashing', () => {
         const player = createPlayer();
         const moveResult = {
           pass: true,
           finish: true,
-          type: JEVEL,
+          type: JEWEL,
         };
         player.setMoveResult(moveResult);
       });

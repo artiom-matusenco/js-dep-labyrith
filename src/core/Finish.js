@@ -2,12 +2,12 @@ import React from 'react';
 
 import BoardItem from './BoardItem';
 import FinishItem from '../components/FinishItem';
-import {JEVEL} from '../constants/boardFields';
+import {JEWEL} from '../constants/boardFields';
 
 export default class Finish extends BoardItem {
 
   constructor() {
-    super(JEVEL);
+    super(JEWEL);
   }
 
   render() {

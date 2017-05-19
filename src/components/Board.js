@@ -6,7 +6,7 @@ import LocalStorageHelper from '../helpers/localStorage';
 import PlayersInfo from './PlayersInfo';
 import BoardMap from './BoardMap';
 
-import {EMPTY, BORDER, WALL, PLAYER, JEVEL} from '../constants/boardFields';
+import {EMPTY, BORDER, WALL, PLAYER, JEWEL} from '../constants/boardFields';
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
 import {LOCAL_STORAGE_MAP_COLLECTION_KEY} from '../constants/localStorageKeys';
 
@@ -88,11 +88,11 @@ export default class Board extends Component {
           finish: false,
           type: PLAYER,
         }
-      case JEVEL:
+      case JEWEL:
         return {
           pass: false,
           finish: true,
-          type: JEVEL,
+          type: JEWEL,
         }
       default:
       throw new Error("Unregistered move result type is returned: " + type);
@@ -166,7 +166,7 @@ export default class Board extends Component {
         return new Border();
       case BORDER:
         return new Finish();
-      case JEVEL:
+      case JEWEL:
       default:
         return new Empty();
     }
@@ -178,7 +178,7 @@ export default class Board extends Component {
         switch(cell.type) {
           case BORDER:
             return new Border();
-          case JEVEL:
+          case JEWEL:
             return new Finish();
           case PLAYER:
           case EMPTY:

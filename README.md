@@ -7,11 +7,29 @@
  - `npm i`
  - `npm start`
 
+ After browser is opened on `http://localhost:3000` the main board is shown.
+
+To improve map editing process there is introduced visual map editor.
+Main functionality: - set size of board - check cell as one of accessible blocks: - border - empty - jewel - put registered players on the board - set movement speed - save / load map configuration
+
+ To enter edit map mode press the button **"Edit"**.
+ When endit mode is activated following optins can be performed:
+  - Set:
+   - Number of Columns
+   - Number of Rows
+   - Speed
+   - Game Timeout (sec)
+  - Put new blocks and players on the board:
+   - `click` on any cell to put one of existing blocks (repeat until needed item is appeared)
+   - `alt + click` put player on board (repeat until needed item is appeared)
+
+ Also Saving / Loading current map (without players) is accessible (currently in localStorage).
+
 ## Description
 This project is an implementation of simple game which is designed to perform a hackathon in JS department teamplayers.
 The game consists in competition of **"TeamPlayers"** implemented by participants of hackathon.
 
-The goal of every **"TeamPlayer"** is to move and find the destination point **"JEVEL"** item before the others. The board will be rounded with wall and there will be many borders inside.
+The goal of every **"TeamPlayer"** is to move and find the destination point **"JEWEL"** item before the others. The board will be rounded with wall and there will be many borders inside.
 
 ## How to test?
 Register your **"TeamPlayer"** class inside `src/players/unit_Player.spec.js` and simply run `npm test`.
@@ -23,7 +41,7 @@ To implement your **"TeamPlayer"** create a new file with name `TeamPlayer[your-
 ```js
 import PlayerBot from '../core/PlayerBot';
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
-import {EMPTY, BORDER, PLAYER, JEVEL, WALL} from '../constants/boardFields';
+import {EMPTY, BORDER, PLAYER, JEWEL, WALL} from '../constants/boardFields';
 
 export default class TeamPlayer extends PlayerBot {
   constructor(id) {
@@ -43,7 +61,7 @@ export default class TeamPlayer extends PlayerBot {
    *  {
    *    pass: {Boolean},
    *    finish: {Boolean},
-   *    type: {String} one of map field type (EMPTY, BORDER, PLAYER, JEVEL, WALL)
+   *    type: {String} one of map field type (EMPTY, BORDER, PLAYER, JEWEL, WALL)
    *   }
    * @return {void}
    */

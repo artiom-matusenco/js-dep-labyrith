@@ -1,6 +1,6 @@
 import PlayerBot from '../core/PlayerBot';
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
-import {EMPTY, BORDER, PLAYER, JEVEL, WALL} from '../constants/boardFields';
+import {EMPTY, BORDER, PLAYER, JEWEL, WALL} from '../constants/boardFields';
 import {Map} from './Map';
 
 export default class TeamPlayer02 extends PlayerBot {
@@ -23,7 +23,7 @@ export default class TeamPlayer02 extends PlayerBot {
    *  {
    *    pass: {Boolean},
    *    finish: {Boolean},
-   *    type: {String} one of map field type (EMPTY, BORDER, PLAYER, JEVEL, WALL)
+   *    type: {String} one of map field type (EMPTY, BORDER, PLAYER, JEWEL, WALL)
    *   }
    * @return {void}
    */
