@@ -5,6 +5,8 @@ import {EMPTY, BORDER, PLAYER, JEVEL} from '../constants/boardFields';
 export default class TeamPlayer1 extends PlayerBot {
   constructor(id) {
     super(id);
+
+    this._state = null;
   }
 
   /**

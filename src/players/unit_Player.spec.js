@@ -1,4 +1,4 @@
-import TeamPlayer from './TeamPlayer';
+import {default as TeamPlayer} from './TeamPlayer02';
 // import there your player to test
 import {FORWARD, BACKWARD, RIGHT, LEFT} from '../constants/directions';
 import {EMPTY, BORDER, PLAYER, JEVEL} from '../constants/boardFields';
